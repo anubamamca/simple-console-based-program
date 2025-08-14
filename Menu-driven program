@@ -1,0 +1,44 @@
+name = input("Enter you name:")
+
+while True:                                          #loop starts here ,loop run infinitely, until stop manually
+    print("\n Menu:")                                      
+    print("1. say hello")
+    print("2. Add two number")
+    print("3. check even/ odd")
+    print("4. check panlidrome")
+    print("5. Exit")
+
+    choice = input("Enter your choice:")
+
+    if choice == "1":
+        print(f"Hello, {name}")
+
+    elif choice == "2":
+        a = int(input("Enter the first number:"))
+        b = int(input("Enter the second number:"))
+        print("Sum = ", a+b)
+
+    elif choice == "3":
+        num = int(input("Enter the number to check even or odd:"))
+        if num%2 == 0:
+            print(f"{num} is a even number.")
+        else:
+            print(f"{num} is a odd number.")
+
+    elif choice == "4":
+        word = input("Enter the word: ")
+        word = word.lower().replace(" ","")
+        if word == word[::-1]:
+            print(f"{word} is a panlindrome.")
+        else:
+            print(f"{word} is not a panlindrome.")
+
+    elif choice == "5":
+        print(f"GoodBye,{name}")
+        break                               #Exit(stop) the loop when user choose 4
+
+    else:
+        print("invalid choice, try again")
+
+#while true: code will just run once, top to bottom, and then stop, if while is not used.so no chance for user to pickup next next choice.
+#simple while is for to do repeative tasks, till user manually stop the loop.
